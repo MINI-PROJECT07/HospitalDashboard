@@ -6,7 +6,7 @@ import { Accidents } from '../components/Accidents'
 const Home = () => {
   return (
     <div>
-        <Header/>
+       
         <Hero/>
         <Accidents/>
     </div>
