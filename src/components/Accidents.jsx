@@ -16,9 +16,7 @@ export const Accidents = () => {
             console.log(data);
             getAccidentsNearest1();
         });
-        return () => {
-            socket.off("accident");
-        }
+   
     }, []);
     return (
         <div>

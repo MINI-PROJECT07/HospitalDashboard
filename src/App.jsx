@@ -3,7 +3,7 @@ import { useState } from "react";
 import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import { LoginPage } from "./pages/LoginPage";
+import  LoginPage  from "./pages/LoginPage";
 import Cases from "./pages/Cases";
 import Case from "./pages/Case";
 import HospitalInfo from "./pages/HospitalInfo";
