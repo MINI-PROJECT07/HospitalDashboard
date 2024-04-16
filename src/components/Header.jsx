@@ -3,6 +3,7 @@ import Logo from "../assets/logo.png";
 // import ProfileImg from "../assets/profile.png";
 import { Dropdown } from "./Dropdown";
 import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <div className=" shadow-sm bg-slate-50">
