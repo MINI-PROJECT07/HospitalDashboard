@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Popup from "reactjs-popup";
 import Accident from "../pages/Accident";
 
 const AccidentCard = (props) => {
     const { accident } = props;
+
     return (
         <div className="bg-white shadow-md rounded-lg p-4 border border-red-600 w-11/12 xl:w-4/6  mx-auto  space-y-4">
             <div className="flex justify-between">
@@ -21,8 +22,7 @@ const AccidentCard = (props) => {
                 <p className="text-gray-600">
                     {" "}
                     <span className="font-medium text-xl">Time : </span>
-                    {accident.time.split("T")[0]}{" "}
-                    {accident.time.split("T")[1].split(".")[0]}
+                    {new Date(accident.time).toLocaleTimeString("en-IN")}
                 </p>
             </div>
             <div className="flex justify-between items-center">
@@ -34,7 +34,7 @@ const AccidentCard = (props) => {
                         </button>
                     }
                 >
-                  <Accident accident={accident}/>
+                    <Accident accident={accident} />
                 </Popup>
             </div>
         </div>
