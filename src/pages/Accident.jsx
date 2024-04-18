@@ -73,10 +73,10 @@ const Accident = (props) => {
                             </p>
                             <p className="text-gray-600">Age: {userInfo.age}</p>
                             <p className="text-gray-600">
-                                Blood Type: {userInfo.bloodType}
+                                Blood Type: {userInfo.bloodGroup}
                             </p>
                             <p className="text-gray-600">
-                                Medical Info: {userInfo.medicalInfo}
+                                Medical Info: {userInfo.disease}
                             </p>
                         </>
                     )}

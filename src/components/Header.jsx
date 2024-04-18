@@ -17,13 +17,7 @@ const Header = () => {
         </div>
         <div className="flex w-fit space-x-8 items-center text-lg mr-10">
           <div className="cursor-pointer hover:scale-110 transition-all">
-            <Link to="/"><span>Dashboard</span></Link>
-            
-          </div>
-          <div className="cursor-pointer hover:scale-110 transition-all ">
-            <Link to="/cases">
-              <span>Cases</span>
-            </Link>
+            <Link to="/"><span>Dashboard</span></Link>  
           </div>
           <div>
             <Dropdown />
