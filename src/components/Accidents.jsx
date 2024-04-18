@@ -2,6 +2,7 @@ import React from "react";
 import { useContext, useEffect } from "react";
 import AccidentContext from "../context/AccidentContext";
 import SocketContext from "../context/SocketContext";
+import AccidentCard from "./AccidentCard";
 
 export const Accidents = () => {
     const context = useContext(AccidentContext);
@@ -16,31 +17,22 @@ export const Accidents = () => {
             console.log(data);
             getAccidentsNearest1();
         });
-   
     }, []);
     return (
-        <div>
+        <div className="p-4 w-full h-full relative">
             <div className="text-center text-red-700 font-extrabold">
                 Recent Cases
             </div>
-            <div>
+            <div className="p-6 space-y-4">
                 {accidents1.length === 0 ? (
                     <div className="text-center text-red-700 font-extrabold">
-                        No accidents
+                        {/* No accidents */}
                     </div>
                 ) : (
                     accidents1.map((accident) => {
                         return (
-                            <div className="border border-red-700  transition-all hover:scale-95 w-3/4 flex mx-auto text text-center border-solid" key={accident._id}>
-                                <div className="text-center text-red-700 font-extrabold">
-                                    {accident.description}
-                                </div>
-                                <div className="text-center text-red-700 font-extrabold">
-                                    {accident.location}
-                                </div>
-                                <div className="text-center text-red-700 font-extrabold">
-                                    {accident.time}
-                                </div>
+                            <div>
+                                <AccidentCard accident={accident} />
                             </div>
                         );
                     })

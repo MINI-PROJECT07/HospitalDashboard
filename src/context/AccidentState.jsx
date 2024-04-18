@@ -17,7 +17,7 @@ const AccidentState = (props) => {
                 },
             });
             const data = await res.json();
-            setAccidents1(data.accidents);
+            setAccidents1(data.accidents.reverse());
         } catch (err) {
             console.log(err);
         }
